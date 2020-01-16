@@ -1,0 +1,27 @@
+{
+  "name": "backend_zad_4",
+  "version": "1.0.0",
+  "description": "zad 4 backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Konrad Niekraś, Tomasz Stroiński",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.2",
+    "winston": "^3.2.1"
+  }
+}

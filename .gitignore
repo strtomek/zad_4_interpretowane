@@ -1,0 +1,5 @@
+#custom directories
+/node_modules
+
+#custom files
+.env
