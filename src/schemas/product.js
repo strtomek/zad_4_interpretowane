@@ -4,19 +4,23 @@ var Schema = mongoose.Schema;
 var productSchema = new Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minlength: 1
     },
     description: {
         type: String,
-        required: true
+        required: true,
+        minlength: 1
     },
     price: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     weight: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     category: {
         type: String,

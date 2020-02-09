@@ -5,23 +5,20 @@ const mongoose = require('mongoose')
 
 //config
 app.use(express.json());
-
-mongoose.connect('mongodb+srv://inter4:' + process.env.PASSWORD + '@interpretowane-7ahy1.gcp.mongodb.net/test?retryWrites=true&w=majority', {
-    useUnifiedTopology: true, useNewUrlParser: true,
-});
-
 app.use(morgan('dev'));
 
 const dotenv = require('dotenv');
 dotenv.config();
 
+mongoose.connect('mongodb+srv://' + process.env.USR + ':' + process.env.PASSWORD + process.env.ENDPOINT ,{ useUnifiedTopology: true, useNewUrlParser: true })
+.catch(error => console.log(error));
+
 //routes 
-var productRoute = require('./src/routes/products/posts')(app);
+var productRoute = require('./src/routes/products')(app);
+var productRoute = require('./src/routes/categories')(app);
 
 app.get('/', (req, res, next) => {
-    res.send('hi');
+    res.send('Not found');
 });
 
-
 var server = app.listen(process.env.PORT);
-
